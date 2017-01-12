@@ -23,10 +23,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6q-Gj-UyX">
                                 <rect key="frame" x="161" y="348.5" width="52" height="30"/>
                                 <state key="normal" title="PKHUD"/>
+                                <connections>
+                                    <action selector="pkhub" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jid-R7-Kku"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq2-RN-VPd">
                                 <rect key="frame" x="147" y="285.5" width="81" height="30"/>
                                 <state key="normal" title="Global HUD"/>
+                                <connections>
+                                    <action selector="globalHud" destination="BYZ-38-t0r" eventType="touchUpInside" id="yYV-yp-FTc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

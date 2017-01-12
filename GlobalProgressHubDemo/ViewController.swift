@@ -10,7 +10,6 @@ import UIKit
 import PKHUD
 
 class ViewController: UIViewController {
-    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
