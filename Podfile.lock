@@ -1,0 +1,21 @@
+PODS:
+  - PKHUD (3.2.1)
+
+DEPENDENCIES:
+  - PKHUD (from `https://github.com/toyship/PKHUD.git`)
+
+EXTERNAL SOURCES:
+  PKHUD:
+    :git: https://github.com/toyship/PKHUD.git
+
+CHECKOUT OPTIONS:
+  PKHUD:
+    :commit: 28fb970b41d63134e962f9da766b96670c0f55f0
+    :git: https://github.com/toyship/PKHUD.git
+
+SPEC CHECKSUMS:
+  PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
+
+PODFILE CHECKSUM: a040eb0f4c31f07c099a95dda4b3d9a6dc1531fa
+
+COCOAPODS: 1.1.1

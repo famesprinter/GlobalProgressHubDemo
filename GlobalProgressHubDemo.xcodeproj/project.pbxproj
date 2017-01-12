@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40B1CAFDD8B5E5A5C292BBB9 /* Pods_GlobalProgressHubDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04599F1766B6D2A658CE7E3 /* Pods_GlobalProgressHubDemo.framework */; };
 		F06EE6641E2687E0001AE244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06EE6631E2687E0001AE244 /* AppDelegate.swift */; };
 		F06EE6661E2687E0001AE244 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06EE6651E2687E0001AE244 /* ViewController.swift */; };
 		F06EE6691E2687E0001AE244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F06EE6671E2687E0001AE244 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29C96AAAA0F6490D937ADB06 /* Pods-GlobalProgressHubDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlobalProgressHubDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GlobalProgressHubDemo/Pods-GlobalProgressHubDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B951E018E9907ED07E36EB8C /* Pods-GlobalProgressHubDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlobalProgressHubDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GlobalProgressHubDemo/Pods-GlobalProgressHubDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C04599F1766B6D2A658CE7E3 /* Pods_GlobalProgressHubDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GlobalProgressHubDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F06EE6601E2687E0001AE244 /* GlobalProgressHubDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlobalProgressHubDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F06EE6631E2687E0001AE244 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F06EE6651E2687E0001AE244 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B1CAFDD8B5E5A5C292BBB9 /* Pods_GlobalProgressHubDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89A4D4F16E2AC83547CB6E9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C04599F1766B6D2A658CE7E3 /* Pods_GlobalProgressHubDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA4CCB7F9C72F0F9E0FBADFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29C96AAAA0F6490D937ADB06 /* Pods-GlobalProgressHubDemo.debug.xcconfig */,
+				B951E018E9907ED07E36EB8C /* Pods-GlobalProgressHubDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F06EE6571E2687E0001AE244 = {
 			isa = PBXGroup;
 			children = (
 				F06EE6621E2687E0001AE244 /* GlobalProgressHubDemo */,
 				F06EE6611E2687E0001AE244 /* Products */,
+				DA4CCB7F9C72F0F9E0FBADFE /* Pods */,
+				89A4D4F16E2AC83547CB6E9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F06EE6721E2687E0001AE244 /* Build configuration list for PBXNativeTarget "GlobalProgressHubDemo" */;
 			buildPhases = (
+				165E9A5028153B31D1DEA049 /* [CP] Check Pods Manifest.lock */,
 				F06EE65C1E2687E0001AE244 /* Sources */,
 				F06EE65D1E2687E0001AE244 /* Frameworks */,
 				F06EE65E1E2687E0001AE244 /* Resources */,
+				BBADE45C981D990C807BACFE /* [CP] Embed Pods Frameworks */,
+				455466DFB8519A2238DC1FCE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		165E9A5028153B31D1DEA049 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		455466DFB8519A2238DC1FCE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GlobalProgressHubDemo/Pods-GlobalProgressHubDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBADE45C981D990C807BACFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GlobalProgressHubDemo/Pods-GlobalProgressHubDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F06EE65C1E2687E0001AE244 /* Sources */ = {
@@ -203,7 +278,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -246,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -256,7 +331,9 @@
 		};
 		F06EE6731E2687E0001AE244 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29C96AAAA0F6490D937ADB06 /* Pods-GlobalProgressHubDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GlobalProgressHubDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -268,7 +345,9 @@
 		};
 		F06EE6741E2687E0001AE244 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B951E018E9907ED07E36EB8C /* Pods-GlobalProgressHubDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GlobalProgressHubDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -297,6 +376,7 @@
 				F06EE6741E2687E0001AE244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
