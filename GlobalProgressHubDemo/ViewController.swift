@@ -15,7 +15,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    // MARK: - IBAction
+    @IBAction func pkhub() {
         HUD.show(.labeledProgress(title: "", subtitle: "Loading..."))
+    }
+    
+    @IBAction func globalHud() {
+        
     }
 }
 
