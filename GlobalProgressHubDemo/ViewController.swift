@@ -18,11 +18,11 @@ class ViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func pkhub() {
-        HUD.show(.labeledProgress(title: "", subtitle: "Loading..."))
+        HUD.show(.labeledProgress(title: "", subtitle: "Loading"))
     }
     
     @IBAction func globalHud() {
-        
+        ProgressHUDView.showHUDInView(superView: view)
     }
 }
 
