@@ -9,8 +9,13 @@
 import UIKit
 
 class ProgressHUDView: UIView {
+    private static var bgView = UIView()
     
     class func showHUDInView(superView: UIView) {
+        // Create BackgroundView
+        bgView = UIView(frame: superView.frame)
+        bgView.isUserInteractionEnabled = false
+        
         // Create Box View
         let boxWidth: CGFloat = 96
         let boxHeight: CGFloat = 96
@@ -38,12 +43,16 @@ class ProgressHUDView: UIView {
                                           width: boxView.frame.size.width,
                                           height: 22))
         label.textAlignment = .center
-        label.text = "Loading..."
-        label.textColor = UIColor(white: 1, alpha: 0.6)
+        label.text = "Loading"
+        label.textColor = UIColor(white: 1, alpha: 0.7)
         label.font = UIFont.boldSystemFont(ofSize: 12)
         boxView.addSubview(label)
         
-        superView.addSubview(boxView)
-        superView.isUserInteractionEnabled = false
+        bgView.addSubview(boxView)
+        superView.addSubview(bgView)
+    }
+    
+    class func hideHUD() {
+        bgView.removeFromSuperview()
     }
 }
